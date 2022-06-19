@@ -1,0 +1,134 @@
+.mainn{
+    /* background-color: honeydew; */
+    
+}
+input{
+    width: 85%;
+}
+textarea{
+    width: 85%;
+}
+h3{
+    margin-top: 18px;
+}
+#hey{
+    background-color: cornflowerblue;
+}
+.import{
+    border: 1px solid;
+    width: 69%;
+    margin-left: 148px;
+    border-bottom: none;
+    margin-top: 50px;
+    box-shadow: 0px 8px 33px -17px;
+}
+
+.impo{
+    margin-top: 24px;
+}
+.card-table{
+    border: 1px solid;
+    width: 69%;
+    margin-left: 148px;
+    background-color: white;
+    border-top: none;
+    padding-top: 51px;
+    box-shadow: 0px 8px 33px -17px;
+    
+}
+.container1{
+    margin-left: 26%;
+    width: 50%;border: 1px solid;
+    margin-top: 31px;
+    background-color: cornflowerblue;
+    margin-bottom: 58px;
+
+}
+.card-product{
+    width: 61%;
+    margin-left: 22%;
+}
+.btn-success{
+    font-size: 19px;
+}
+.btn-success:hover{
+    background-color: brown;;
+}
+.btn-warning{
+    font-size: 20px;
+    margin-left: 18px;
+    color: white;
+    background-color: black;
+}
+#grandt{
+    margin-right: 9px;
+}
+.modal-header{
+    background-color: darkseagreen;
+}
+small{
+    margin-left: 86px;
+}
+.rounded-pill{
+    background-color: #d0d31c;
+    font-weight: bold;
+    font-size: 19px;
+    color: #e2552b;
+    margin-right: 16%;
+}
+.rounded-pill:hover{
+    background-color: #301cd3;
+}
+.modal-body{
+    background-image: url("https://cdn.pixabay.com/photo/2021/07/06/19/26/drops-6392473__340.jpg");
+    background-position: top center !important;
+    height: auto;
+    width: 100%;
+}
+#inputb{
+    width: 68%;
+    margin-top: 30px;
+}
+.modal-content{
+    width: 67%;
+}
+.close{
+    border-radius: 41%;
+    width: 32px;
+    background-color: red;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+
+    .container1{
+        margin-left: 7%;
+        width: 86%;
+        margin-bottom: 23px;
+    }
+
+    .card-product{
+        width: 103%;
+        margin-left: -1%;
+    }
+    .btn-warning{
+        font-size: 8px;
+        margin-left: 2px;
+        background-color: cyan;
+    }
+    .btn-success{
+        font-size: 10px;
+        margin-left: 11px;
+    }
+    .modal-dialog{
+        width: 124%;
+        margin-left: 22px;
+        margin-top: 134px;
+    }
+    #inputb{
+        width: 60%;
+    }
+   
+}

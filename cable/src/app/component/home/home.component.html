@@ -1,0 +1,277 @@
+<app-navbar></app-navbar>
+<div class="">
+    <div class="bod">
+      <!-- <div class="texti">
+        <button class="button"data-toggle="modal" data-target="#myModal1"><span>Change Your Package</span></button>
+        <button id="btn2"  class="button"data-toggle="modal" data-target="#myModal2"><span>Register New User Here</span></button>
+        <br /><br /><br />
+        &nbsp;
+      </div>
+      &nbsp; -->
+      <div class="row textn">
+        <div class=" col-md-5 col-8 line1">
+          <h4 id="h4" style="color: white;font-weight: bold;" >Watch your favorite Movies and TV shows with a theatre-like experience</h4>
+        </div>
+        
+      </div>
+      <div class="row col-md-3 col-9">
+        <h1  id="linesec">The world of Entertainment  at your tips!</h1>
+      </div>
+      <div class="row">
+        <div class="bt">
+          <button class="button2"  data-toggle="modal" data-target="#exampleModal">Existing User</button>
+          <button class="button2" id="butn1"data-toggle="modal" data-target="#myModal2">Register  Now</button>
+        </div>
+      </div>
+      
+  </div>
+  <div class="text-center">
+      <p id="abtus">About Us</p>
+  </div>
+  <hr id="line1">
+  <!-- <div class="text-center">
+      <p id="para">Lorem ipsum is placeholder text commonly used in the graphic,
+          print, and publishing industries for previewing layouts and 
+          visual mockups.</p>
+  </div>
+  <div class="row ">
+    <div class="container my-4">
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+    
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://cdn.w600.comps.canstockphoto.com/tv-system-remote-control-tv-set-and-clip-art_csp2186252.jpg"
+                       alt="Card image cap">
+                </div>
+              </div>
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://www.lifewire.com/thmb/cMLo4k4UgmZ-KG-BpooXH-Twv44=/1333x1000/smart/filters:no_upscale()/SonyKD55X720E55-Inch4kUltraHDSmartLEDTV-5ae2296bfa6bcc0036833c06.jpg"
+                       alt="Card image cap">
+                </div>
+              </div>
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://image1.masterfile.com/getImage/NjkzLTAzMzAwNjIwZW4uMDAwMDAwMDA=AGjNKS/693-03300620en_Masterfile.jpg"
+                       alt="Card image cap">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                  <div class="card mb-2">
+                    <img class="card-img-top" src="https://image1.masterfile.com/getImage/NjkzLTAzMzAwNjIwZW4uMDAwMDAwMDA=AGjNKS/693-03300620en_Masterfile.jpg"
+                         alt="Card image cap">
+                  </div>
+                </div>
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://helios-i.mashable.com/imagery/reviews/00YfzOiLCF53cCIU8A3DiPl/hero-image.fill.size_1200x900.v1623386413.jpg"
+                       alt="Card image cap">
+                </div>
+              </div>
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://cdn.w600.comps.canstockphoto.com/tv-system-remote-control-tv-set-and-clip-art_csp2186252.jpg"
+                       alt="Card image cap">
+                </div>
+              </div>
+            </div>   
+          </div>
+        </div>
+     </div>
+     <div class="controls-top text-center">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a style="    margin-left: 10px;" class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+     </div> 
+  </div>
+  </div> -->
+   <div class="row about">
+     <div class="col-md-1"></div>
+     <div class="col-md-3 col-6">
+       <p id="paragraph" *ngFor="let item of user">
+        <!-- "Lorem ipsum dolor sit amet, consectetur 
+        adipiscing elit, sed do eiusmod tempor incididunt
+         ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris 
+          nisi ut aliquip ex ea commodo consequat." -->
+          {{item.aboutus}}
+       </p>
+     </div>
+     <div class="col-md-2"></div>
+     <div class="col-md-6  image-wrapper">
+       <img id="image1" *ngFor="let item of user" src="{{item.cover_image_url}}" alt="">
+       <img id="image2" src="assets/images/img1.jpeg" alt="">
+
+     </div>
+   </div>
+  <div class="text-center" id="our">
+    <p id="abtus" style="margin-top: 2%;">Our Packages</p>
+  </div>
+  <hr id="line1">
+  <!-- <div class="row black" style="background-color: floralwhite;">
+    <div class="col-md-1"></div>
+    <div id="pack" class="col-md-2 card" style="background-color: gold;"><strong id="packd1">Gold Pack</strong></div>
+    <div class="col-md-1"></div>
+    <div id="pack" class="col-md-2 card" style="background-color: silver;    "><strong id="packd1">Silver Pack</strong></div>
+    <div class="col-md-1"></div>
+    <div id="pack" class="col-md-2 card" style="background-color: plum ;    "><strong id="packd">Platinum Pack</strong></div>
+    <div class="col-md-1"></div>
+    <div id="pack" class="col-md-2 card"><strong id="packd" >Diamond Pack</strong></div>
+    <div class="col-md-1"></div>
+  </div> -->
+  <div class="row container text-center packages">
+    <!-- <div class="col-md-3"></div> -->
+    <div class="col-md-3 col-6" *ngFor="let item of name1">
+      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">{{item.name}}</div>
+        <div class="card-body">
+          <h5 class="card-title">Title</h5>
+          <p class="card-text">{{item.description}}</p>
+        </div>
+        <div class="card-header">{{item.price}}</div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row text-center">
+    <h3 id="cont" >Reach Out To Us</h3>
+  </div>
+  <hr id="line2">
+  <!-- <div class="row footer">
+    <div class="video row" id="contact">
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+       <h4 id="addf">Address:</h4>
+       <p id="addf1">Trade center, B-404, Koregaon Park , North Main Road, Pune , India -411001</p>
+      </div>
+      <div class="col-md-5 l">
+        <h4 id="mapl">Location:</h4>
+          <agm-map 
+            [latitude]="lat" 
+            [longitude]="lng" 
+            [zoom]="zoom">
+        
+            <agm-marker *ngFor="let marker of markers" 
+              [latitude]="marker.position.lat" 
+              [longitude]="marker.position.lng"
+              [label]="marker.label">
+            </agm-marker>
+         </agm-map>
+      </div>
+      <div class="col-md-3 last">
+        <i  style="font-size: 20px;" class="fas fa-phone"></i><strong  id="last">(+91)-9158683137</strong><br />
+        <i style="font-size: 20px;" class="fas fa-envelope-open"></i><strong id="last"> cablenetwork@gmail.com</strong><br />
+        <i style="font-size: 20px;" class="fas fa-building" ></i><strong id="last">www.punecable.com</strong>
+      </div> 
+    </div>
+  </div> -->
+  <div class="footter">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="main1">
+          <div class="mainbody">
+             <p class="mbr-text mbr-fonts-style display-7"><i class="fa fa-phone" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="p">+91 9158683137 </a>
+              <br><i class="fa fa-envelope" style="font-size:20px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="p" *ngFor="let item of user">{{item.org_email}}</a> 
+              <br><i class="fa fa-globe" style="font-size:24px"></i>&nbsp;&nbsp;<a id="p"*ngFor="let item of user">{{item.websiteurl}}</a> 
+              <br><i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i *ngFor="let item of user" >{{item.address}}</i> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container">
+            <iframe frameborder="0" style="border:0"width="90%"height="350vh" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7653187711153!2d73.89700491436898!3d18.539504373434866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1068d03e109%3A0xf1a96c5ba9ef45a9!2sSpiderG!5e0!3m2!1sen!2sin!4v1644993063985!5m2!1sen!2sin" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footterr text-center">
+    <h4 id="foot">Created and Design with love from SpiderG Technologies Pvt.Ltd. </h4>
+  </div>
+
+
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body ">
+              <div class="head">
+                <h2 class="modal-title"><b id="signup">Sign Up</b></h2>
+                <button   type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <form #signupForm="ngForm" (ngSubmit)="signUp(signupForm.value)">
+                <div class="box">
+                    <span><i class="fa fa-user icon" aria-hidden="true"></i></span>
+                  <input type="text" id="fname" required  ngModel name="name" placeholder="Your Name.."><br>
+                </div>
+                <div class="box1">
+                  <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                  <input type="text"minlength="6" required ngModel id="fname1" name="mobilenumber" placeholder="Your Mobile Number.."><br>
+                </div>  
+                <div class="box1">
+                  <span><i class="fa fa-home"  aria-hidden="true"></i></span>
+                  <input type="text" required  id="fname1" ngModel name="address" placeholder="Your Address.."><br>
+                </div>                    
+                  <br>
+                  <button class="btn na-btn1"type="submit" >SignUp</button>&nbsp;
+              </form>
+            </div>
+        </div>
+
+    </div>
+ </div>
+ <!-- ///////////second popup////////////// -->
+  <div class="modal fade" id="exampleModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" id="second">
+            <div class="modal-body" id="sec">
+                <div class="head1">
+                  <h2 class="modal-title" ><b id="signin">SignIn</b></h2>
+                  <button type="btn" class="button1" data-dismiss="modal">&times;</button>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" >
+                  <div class="box">
+                      <span><i class="fa fa-user icon" aria-hidden="true"></i></span>
+                    <input type="text" id="fname"formControlName="name" required  name="name" placeholder="Your Name.."><br>
+                  </div>
+                  <div class="box1">
+                    <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <input type="text"minlength="6"formControlName="mobilenumber" required  id="fname1" name="mobile_number" placeholder="Your Mobile Number.."><br>
+                  </div>                      
+                    <br>
+                    <button class="btn na-btn1"[disabled]="loginForm.invalid"type="submit">SignIn</button>&nbsp;
+                </form>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+

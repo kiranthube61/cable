@@ -1,0 +1,144 @@
+
+<div class="mainn">
+         <!-- <div class="row">
+        <div class="container1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Selected Pack</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>{{packageName}}</td>
+                        <td><i class="fas fa-rupee-sign"></i>{{packageAmount}}</td>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div> -->
+    <ng-container>
+        <div class="container">
+            <div class="import">
+                <div class=" text-center">
+                   <h3><strong>My Pack Details</strong></h3>
+                    <h4 ><strong id="hey">{{packageName}}&nbsp;&nbsp;&nbsp;Member</strong></h4>
+                </div>
+                <div class="row impo">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3"><input type="text" placeholder="Name"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3"><input type="text" placeholder="Invoice No."></div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row impo">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3"><input type="number" placeholder="Mobile no."></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3"><input type="date" placeholder="Date"></div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row impo">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3"><textarea type="text" placeholder="Address"></textarea></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3"><input type="number" placeholder="Setup Box No."></div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+            
+            <div class="card-table">
+                <div class="card-product">
+                    <table class="table">
+                        <!-- <thead>
+                            <tr>
+                                <th>Sr.No.</th>
+                                <th>Channels</th>
+                                <th>Language</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead> -->
+                        <tbody>
+                            <tr>
+                                <td><strong>{{packageName}}</strong></td>
+                                <td><strong>{{packageAmount}}</strong></td>
+                            </tr>
+                            <tr *ngFor="let item of products , let i= index">
+                                <!-- <td>{{i+1}}</td> -->
+                                <td>{{item.channel_name}}</td>
+                                <!-- <td>{{item.language}}</td> -->
+                                <td><i class="fas fa-rupee-sign"></i>{{item.MRP}}</td>
+                                <!-- <td><button class="btn btn-danger" (click)="removeProduct(item)"><i class="fas fa-trash"></i></button></td>                               -->
+                            </tr>
+                            <tr>
+                                <td><h4><strong>Grand Total:</strong></h4></td>
+                                <td><h4><strong><i class="fas fa-rupee-sign"></i>{{final}}</strong></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button routerLink="/packages" class="btn btn-warning">Change Plan</button>
+
+                                </td>
+                                <td>
+                                    <button  class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Check Out</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-5">
+                        <strong id="grandt">Grand Total: <i class="fas fa-rupee-sign"></i>{{final}}</strong>
+                        <strong id="grandt">Grand Total: <i class="fas fa-rupee-sign"></i>{{grandTotal}}</strong>
+
+                        <button  class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Check Out</button>
+                        <button routerLink="/packages" class="btn btn-warning">Add More Channels</button>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2">
+                        <button routerLink="/packages" class="btn btn-warning">Change Plan</button>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div> -->
+            </div>
+        </div>
+    
+    </ng-container>   
+    
+    
+    <div class="modal fade" id="exampleModal"tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header ">
+              <h5 class="modal-title" id="exampleModalLabel">Make Payment</h5>
+              <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body " style="background-color: aqua;">
+                <form [formGroup]="form" >
+    
+                    <label for="amount">Amount:</label>&nbsp;&nbsp;&nbsp;
+                    <strong> <i class="fas fa-rupee-sign"></i> {{final}}</strong><br>
+                  
+                    <label for="mobilenumber">Mobile No:</label>
+                    <input id="inputb"type="number"formControlName="mobileNumber"    name="mobile" placeholder=" enter mobile number"><br>
+                    <small style="color: red;"  *ngIf="f['mobileNumber'].touched && f['mobileNumber'].invalid" >Please Enter Valid Mobile Number</small><br>
+                                                         
+                   <div class="modal-footer">
+                    <button type="submit"[disabled]="!form.valid" class=" rounded-pill"(click)="refresh()" routerLink="/congrats" >Pay Now</button>
+                     <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel </button>
+                     
+                   </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+

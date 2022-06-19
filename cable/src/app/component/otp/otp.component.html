@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="text-center">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"> <h3>Enter OTP</h3></h5>
+        <div class="text">
+          <ngx-otp-input id="box" [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" 
+            (fill)="handleFillEvent($event)">
+          </ngx-otp-input>
+        </div>
+     <button class="rounded-pill"routerLink="/packages">Submit</button><br>
+     <a routerLInk="/otp" href="/otp">Resend OTP</a>
+      </div>
+    </div>
+  </div>
+</div>

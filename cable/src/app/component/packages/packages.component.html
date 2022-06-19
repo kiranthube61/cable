@@ -1,0 +1,166 @@
+
+<div class="imp">
+  <div class="row nav">
+    <div class="col-md-2"></div>
+    <!-- <div class="col-md-4" id="changepack">Change Pack</div> -->
+    <div class="col-md-4" id="changepack" routerLink="/home"><i class="fas fa-home"></i></div>
+    <div class="col-md-4"></div>
+    <div class="col-md-2 cart">
+      <strong class="btn "routerLink="/cart"><i class="fas fa-cart-plus" id="button1"></i>
+           <div style="font-size: 9px;" class="badge bg-danger">{{totalItemNumber}}
+          </div><p id="p">My Cart</p>
+      </strong>
+    </div>
+  </div>
+  <!-- <div class="container "> 
+    <div class="row">
+      <div class="col-md-2 img">
+          <img id="img" src="http://swwts.com/public/uploads/images/our-packages.jpg" alt="">
+      </div>
+      <div class="col-md-8">
+        <h3>PACKAGES</h3>
+        
+
+        <table class="table text-center main1">
+          <tbody>
+            <tr style="background-color: gold;">
+              <td>GOlD</td>
+              <td><i class="fas fa-rupee-sign"></i>250</td>
+              <td><input (change)="packageDetails('GOLD','250')"  type="radio" id="pack" name="packs" value="GOLD"></td>
+                 
+            </tr>
+            <tr style="background-color: silver;">
+              <td>SILVER</td>
+              <td><i class="fas fa-rupee-sign"></i>300</td>
+              <td><input (change)="packageDetails('SILVER','300')"   type="radio" id="pack" name="packs" value="SILVER"></td>
+            </tr>
+            <tr style="background-color: #E5E4E2;" >
+              <td>PLATINUM</td>
+              <td><i class="fas fa-rupee-sign"></i>350</td>
+              <td><input (change)="packageDetails('PLATINUM','350')"    type="radio" id="pack" name="packs" value="PLATINUM"></td>
+            </tr>
+            <tr style="background-color:  #b9f2ff;">
+              <td>DIAMOND</td>
+              <td><i class="fas fa-rupee-sign"></i>400</td>
+              <td><input (change)="packageDetails('DIAMOND','400')"    type="radio" id="pack" name="packs" value="DIAMOND"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>   
+    <div class="row">
+      <div class="col-md-2 ">
+          <img id="img1" src="https://us.123rf.com/450wm/outchill/outchill1711/outchill171104829/89024397-a-la-carte-text-on-grey-and-cyan-round-stamp-with-zig-zag-border-and-vintage-texture-.jpg?ver=6" alt="">
+      </div>
+      <div class="col-md-8">
+        <h3 style="background-color: #62ff00;">CHANNELS</h3>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search by Channel Name, Language, Price"[(ngModel)]="search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
+        <table class="table text-center main">
+          <tbody>
+            <tr style="background-color: antiquewhite;" *ngFor="let item of user | filter:search">
+              <td>{{item.channel_name}}</td>
+              <td style="font-size: 15px;font-weight: 500;">{{item.language}}</td>
+              <td><i class="fas fa-rupee-sign"></i>{{item.MRP}}</td>
+              <td><input class="packed3" type="checkbox" (click)="addtoCart(item)"></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  </div> -->
+  
+</div>  
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><h4 id="lco">Lco Packages</h4> </div>
+</div>
+<div class="row container2">
+  <div class="col-md-1"></div>
+  <div class="col-md-4">
+    <h4>Selected Pack</h4>
+  </div>
+  <div class="col-md-4"><h5>{{packageName}}</h5></div>
+  <div class="col-md-1"></div>
+  <div class="col-md-1"><strong><i class="fas fa-rupee-sign"></i>{{packageAmount}}</strong></div>
+</div>
+<div class="row package">
+  <div class="col-md-3">
+
+      <div class="packs1">
+        <input (change)="packageDetails('GOLD','250')"  type="radio" name="packs" value="GOLD"> 
+        <strong> GOLD</strong> 
+        <strong style="float: right;"><i class="fas fa-rupee-sign"></i>300/-</strong> 
+      </div> 
+    
+  </div>
+  <div class="col-md-3">
+      <div class="packs2">
+        <input (change)="packageDetails('PLATINUM','280')"  type="radio" name="packs" value="PLATINUM"> 
+        <strong>PLATINUM</strong> 
+        <strong style="float: right;"><i class="fas fa-rupee-sign"></i>300/-</strong> 
+      </div> 
+  
+  </div>
+  <div class="col-md-3">
+      <div class="packs3">
+        <input (change)="packageDetails('DIAMOND','300')"  type="radio" name="packs" value="DIAMOND"> 
+        <strong>DIAMOND</strong> 
+        <strong style="float: right;"><i class="fas fa-rupee-sign"></i>300/-</strong> 
+      </div> 
+  
+  </div>
+  <div class="col-md-3">
+    <div class="packs4">
+      <input (change)="packageDetails('SILVER','350')"  type="radio" name="packs" value="SILVER"> 
+      <strong>SILVER</strong> 
+      <strong style="float: right;"><i class="fas fa-rupee-sign"></i>300/-</strong> 
+    </div> 
+  </div>    
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><h4 id="lco">A La Carte</h4> </div>
+</div>
+
+<div class="container imp">
+  <div class="row new1">
+    <div class="col-md-2"></div>
+    <div class="col-md-2"><button>All Channels</button></div>
+    <div class="col-md-2" ><button id="enter">Entertainment</button></div>
+    <div class="col-md-1"><button>Sports</button></div>
+    <div class="col-md-1"><button>News</button></div>
+    <div class="col-md-1"><button>Kids</button></div>
+    <div class="col-md-1"><button>English</button></div>
+  </div>
+  <div class="row item">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search by Channel Name, Language, Price"[(ngModel)]="search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary second" type="button">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table new">
+      <tbody>
+        <tr *ngFor="let item of user | filter:search">
+          <td>{{item.channel_name}}</td>
+          <td style="font-size: 15px;font-weight: 500;">{{item.language}}</td>
+          <td><i class="fas fa-rupee-sign"></i>{{item.MRP}}</td>
+          <td><input class="packed3" type="checkbox" (click)="addtoCart(item)"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+
+
+<router-outlet></router-outlet>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

@@ -1,0 +1,16 @@
+{
+  "signupUser": [
+    {
+      "id": "1",
+      "name": "kiran thube",
+      "mobilenumber": "9158683137",
+      "address": "pune"
+    },
+    {
+      "name": "nayan",
+      "mobilenumber": "9049405904",
+      "address": "ahmednagar",
+      "id": "A1EOEp8"
+    }
+  ]
+}

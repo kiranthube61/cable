@@ -1,0 +1,47 @@
+.navbar{
+    padding-left: 10%;
+    background-color: black;
+    border-bottom: 1px solid
+}
+#pune{
+    color: white;
+    font-size: 30px;
+    padding-right: 10%;
+    font-weight: bold;
+}
+#collapsibleNavbar{
+    padding-left: 68px;
+    font-size: 22px;
+    font-family: serif;
+}
+.nav-item:hover{
+    background-color: rgb(224, 118, 18); 
+}
+a{
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 600px){
+
+    #collapsibleNavbar{
+        padding-left: 225px;
+       
+    }
+    .navbar{
+        width: 97%;
+    }
+
+    .toggler-icon{
+        margin-right: 17px;
+        border: 1px solid;
+        font-size: 30px;
+    }
+    button{
+        margin-right: 32px;
+        font-size: 37px;
+    }
+    .navbar-dark .navbar-toggler {
+        margin-right: 28px;
+    }
+}
